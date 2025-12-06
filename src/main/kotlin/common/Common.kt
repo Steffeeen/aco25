@@ -16,3 +16,9 @@ fun c(actual: Int, expected: Int) {
         throw IllegalStateException("Check failed: expected $expected but got $actual")
     }
 }
+
+fun c(actual: Long, expected: Long) {
+    if (actual != expected) {
+        throw IllegalStateException("Check failed: expected $expected but got $actual")
+    }
+}
