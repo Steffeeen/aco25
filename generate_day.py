@@ -62,7 +62,7 @@ fun part2(input: String): Int {{
 
     test_inputs_dir = "src/main/resources/test_inputs"
     os.makedirs(test_inputs_dir, exist_ok=True)
-    with open(f"{test_inputs_dir}/day{day_str}.txt", 'w') as f:
+    with open(f"{test_inputs_dir}/day{day_str}_example.txt", 'w') as f:
         f.write("")
 
     print(f"Created files for Day {day_str}")
