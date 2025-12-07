@@ -3,6 +3,7 @@ package day04
 import common.c
 import common.loadInput
 import common.loadTestInput
+import common.parseGrid
 
 fun main() {
     val input = loadInput(4)
@@ -48,5 +49,3 @@ fun getRemovableRolls(grid: List<List<Triple<Char, Int, Int>>>): List<Triple<Cha
         c == '@' && adjacent.count { it == '@' } < 4
     }
 }
-
-fun parseGrid(input: String): List<List<Triple<Char, Int, Int>>> = input.lines().mapIndexed { y, line -> line.mapIndexed { x, c -> Triple(c, x, y) }}

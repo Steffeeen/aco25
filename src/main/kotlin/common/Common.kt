@@ -22,3 +22,5 @@ fun c(actual: Long, expected: Long) {
         throw IllegalStateException("Check failed: expected $expected but got $actual")
     }
 }
+
+fun parseGrid(input: String): List<List<Triple<Char, Int, Int>>> = input.lines().mapIndexed { y, line -> line.mapIndexed { x, c -> Triple(c, x, y) }}
