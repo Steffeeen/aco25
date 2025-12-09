@@ -24,3 +24,5 @@ fun c(actual: Long, expected: Long) {
 }
 
 fun parseGrid(input: String): List<List<Triple<Char, Int, Int>>> = input.lines().mapIndexed { y, line -> line.mapIndexed { x, c -> Triple(c, x, y) }}
+
+fun <T> List<T>.firstTwoToPair(): Pair<T, T> = Pair(this[0], this[1])
