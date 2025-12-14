@@ -7,8 +7,9 @@ fun loadInput(day: Int): String {
     return Files.readString(Paths.get("src/main/resources/inputs/day${day.toString().padStart(2, '0')}.txt")).trimIndent()
 }
 
-fun loadTestInput(day: Int): String {
-    return Files.readString(Paths.get("src/main/resources/test_inputs/day${day.toString().padStart(2, '0')}_example.txt")).trimIndent()
+fun loadTestInput(day: Int, extra: String? = null): String {
+    val extraString = if (extra != null) "_$extra" else ""
+    return Files.readString(Paths.get("src/main/resources/test_inputs/day${day.toString().padStart(2, '0')}_example${extraString}.txt")).trimIndent()
 }
 
 fun c(actual: Int, expected: Int) {
